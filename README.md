@@ -5,11 +5,12 @@ an effort to fix this issue. This is HEAVILY inspired off of [Zenesus](https://g
 (with tons more features). This is meant to be a more lightweight version of Zenesus, that runs on the desktop.
 
 Currently, this app only supports Genesis gradebook. If you are looking for more, use Zenesus.
+### Note: This code was rushed and only meant for my personal use (not any form of production).
 
-# Major Dependencies and Credit
-
+# Credit and Dependencies
 - HUGE Credit to [Zenesus](https://github.com/Zenesus) and [ed.xyz](https://github.com/EDED2314) for the scraping code/general inspiration
 - Selenium WebDriver and BS4 for getting the data.
+- https://github.com/rdbende/Azure-ttk-theme
 - Full list of dependencies found in requirements.txt
 
 # Setup

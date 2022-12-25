@@ -2,3 +2,5 @@ selenium
 webdriver_manager
 flask
 BeautifulSoup4
+pyqt5
+sv-ttk
