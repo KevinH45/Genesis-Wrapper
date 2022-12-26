@@ -19,7 +19,6 @@ def login(username, password):
     return True
 
 def get_grades(username, password):
-    print("HELLO?")
     driver.get("https://students.mtps.com/")
     driver.minimize_window()
 

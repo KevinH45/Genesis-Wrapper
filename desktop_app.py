@@ -4,21 +4,24 @@ from views.AddAccount import AddAccount
 from views.ClassView import ClassView
 from views.GradeOverview import GradeOverview
 from scripts import WebDriverUtils
+import sv_ttk
 
-routes = {
-    1: AccountSelector,
-    2: AddAccount,
-    3: GradeOverview,
-    4: ClassView,
-}
+class CustomTk(Tk):
+    def change_page(self, page, **kwargs):
+        routes = {
+            1: AccountSelector,
+            2: AddAccount,
+            3: GradeOverview,
+            4: ClassView,
+        }
 
-def change_page(page, root, **kwargs):
-    for widget in root.winfo_children():
-        widget.destroy()
-    # Display that route
-    routes[page](root, **kwargs)
+        for widget in self.winfo_children():
+            widget.destroy()
+        # Display that route
+        routes[page](self, **kwargs)
 
+root = CustomTk()
+sv_ttk.use_light_theme()
 
-root = Tk()
-change_page(1, root)
+root.change_page(1)
 root.mainloop()

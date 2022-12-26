@@ -7,6 +7,7 @@ import sv_ttk
 class AccountSelector:
 
     def __init__(self, root):
+        self.root = root
         self.loaded_data = retrieve_json()
         container = Frame(root)
 
@@ -20,11 +21,16 @@ class AccountSelector:
         submit_button = ttk.Button(container, text="Login", command=self.gui_login)
         submit_button.pack(anchor="center", padx=10, pady=10)
 
+
+        signup_button = ttk.Button(container, text="Or, add an account", style="Accent.TButton", command=self.signup)
+        signup_button.pack(anchor="center", pady=20)
         container.pack(expand=True)
-        sv_ttk.use_light_theme()
 
     def gui_login(self):
         try:
-            grades = get_grades(self.select_button.get(), self.loaded_data[self.select_button.get()])
+            self.root.change_page(3, username=self.select_button.get(), password=self.loaded_data[self.select_button.get()])
         except:
             exit()
+
+    def signup(self):
+        self.root.change_page(2)
