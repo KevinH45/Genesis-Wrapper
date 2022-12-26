@@ -10,7 +10,7 @@ Currently, this app only supports Genesis gradebook. If you are looking for more
 # Credit and Dependencies
 - HUGE Credit to [Zenesus](https://github.com/Zenesus) and [ed.xyz](https://github.com/EDED2314) for the scraping code/general inspiration
 - Selenium WebDriver and BS4 for getting the data.
-- https://github.com/rdbende/Azure-ttk-theme
+- [SVTTK](https://github.com/rdbende/Sun-Valley-ttk-theme) for creating the frontend.
 - Full list of dependencies found in requirements.txt
 
 # Setup
@@ -21,11 +21,10 @@ This was made for fun and learning, so please excuse the tedious setup.
 2. Download Edge
 3. Clone the repo: ```git clone https://github.com/KevinH45/Genesis-Wrapper.git```
 4. Install requirements: ```pip install requirements.txt -r```
-5. Run app.py: ```python3 app.py```
-6. Send a GET request: ```curl -i -x GET localhost:5000/grades?username="USERNAME"&password="PASSWORD"```
+5. Run desktop_app.py: ```python3 desktop_app.py```
 
 
 
 # Dev Notes
-- Flask API Done, though it might be scrapped
-- Need to actually work on the frontend
+- Finished barebones scraping, going to work on finishing up the frontend
+- Scrape detailed views

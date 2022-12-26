@@ -12,11 +12,11 @@ routes = {
     4: ClassView,
 }
 
-def change_page(page, root):
+def change_page(page, root, **kwargs):
     for widget in root.winfo_children():
         widget.destroy()
     # Display that route
-    routes[page](root)
+    routes[page](root, **kwargs)
 
 
 root = Tk()
