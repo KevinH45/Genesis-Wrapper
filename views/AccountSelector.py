@@ -7,12 +7,8 @@ import sv_ttk
 class AccountSelector:
 
     def __init__(self, root):
-
-        self.window = root
-        self.window.title("Genesis Wrapper")
-        self.window.geometry("500x500")
         self.loaded_data = retrieve_json()
-        container = Frame(self.window)
+        container = Frame(root)
 
         title_label = ttk.Label(container, text="Choose your account")
         title_label.configure(font=("Roboto", 18, "bold"), foreground="#0455d8")
@@ -26,15 +22,9 @@ class AccountSelector:
 
         container.pack(expand=True)
         sv_ttk.use_light_theme()
-        self.window.mainloop()
 
     def gui_login(self):
         try:
             grades = get_grades(self.select_button.get(), self.loaded_data[self.select_button.get()])
         except:
             exit()
-
-
-
-
-AccountSelector(Tk())
